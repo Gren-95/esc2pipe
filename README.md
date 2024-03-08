@@ -1,5 +1,5 @@
 # esc2pipe
-A fish plugin that lets you hit the "esc" key to add the pipe character.
+A fish plugin that lets you hit the "esc" key to add the "|" character.
 this plugin is useful for people who have laptop that don't have the key in their keyboard layout
 
 ## Installation
