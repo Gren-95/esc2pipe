@@ -84,19 +84,6 @@ else instead:
 bind ctrl-g insert_pipe_on_esc
 ```
 
-## Known issues
-
-The published `conf.d/esc2pipe.fish` also runs:
-
-```fish
-set -U CURSOR (math $CURSOR + 2)
-```
-
-That line has no effect. `commandline -i` already advances the cursor, and
-`CURSOR` is not a variable fish reads — it just creates a universal variable
-of that name in your shell. It is harmless, and removing it changes nothing
-about how the plugin behaves.
-
 ## Uninstall
 
 ```fish
