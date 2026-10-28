@@ -2,14 +2,18 @@
 
 A [fish](https://fishshell.com/) plugin that types `|` when you press Escape.
 
+<p align="center">
+  <img src="docs/demo.png" alt="A fish session where every pipe in the commands was typed by pressing Escape" width="800"/>
+</p>
+
 ## Why
 
 Some keyboard layouts put the pipe character behind a combination a laptop
-cannot produce — no dedicated key, and no AltGr position that works. If you
-write shell pipelines all day, reaching for it is a constant interruption.
+can't produce: there's no dedicated key, and no AltGr position that works. If
+you write shell pipelines all day, that gets in the way every few minutes.
 
-`esc2pipe` rebinds a key you rarely need at a prompt to the one you need
-constantly.
+`esc2pipe` makes Escape, which you rarely need at a prompt, type the pipe
+instead.
 
 ## Requirements
 
@@ -56,14 +60,14 @@ function insert_pipe_on_esc
     commandline -i " |"
 end
 
-bind escape insert_pipe_on_esc
+bind \e 'insert_pipe_on_esc'
 ```
 
 `commandline -i` inserts text at the cursor and moves the cursor along with it.
 
 ## Notes
 
-**There is no space after the pipe.** The inserted string is `" |"` — a space
+**There is no space after the pipe.** The inserted string is `" |"`: a space
 before, none after. `cat log |grep 404` runs exactly as `cat log | grep 404`
 does, but if you want the second space, change the string in the function.
 
@@ -99,4 +103,4 @@ in March 2024. This is a fish plugin only.
 
 ## Licence
 
-GPL-3.0 — see [LICENSE](LICENSE).
+GPL-3.0, see [LICENSE](LICENSE).
